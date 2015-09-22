@@ -1,0 +1,19 @@
+{% extends "newbase.html" %}
+
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+{% block content %}
+
+    <h2 style="padding-bottom: 2%; font-family: Verdana">{{self.title}}</h2>
+    <div>
+        {% image self.pic fill-360x360 %}
+    </div>
+    <h4 style="font-family: Verdana">Item Number: {{self.item_number|stringformat:"04d"}}</h4>
+    <h4 style="font-family: Verdana">SKU: {{ self.SKU }}</h4>
+    <div style="width: 50%">
+        <h4 style="font-family: Verdana">{{ self.description|richtext }}</h4>
+    </div>
+    <h4 style="font-family: Verdana">Price: <strong>${{ self.price }}<strong></strong></h4>
+
+{% endblock %}

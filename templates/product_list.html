@@ -1,0 +1,47 @@
+{% extends "newbase.html" %}
+
+
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+{% block content %}
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#product_list').DataTable();
+        } );
+    </script>
+
+    <style type="text/css">
+        td {
+            font-weight: bold;
+            vertical-align: middle;
+        }
+    </style>
+
+    <div class="container">
+        <table id="product_list" class="table table-striped">
+            <thead>
+                <th colspan="2"></th>
+                <th>Item No.</th>
+                <th>SKU</th>
+                <th>Price</th>
+                <th>Description</th>
+            </thead>
+            {% for product in product_list %}
+                <tr>
+                    {% if product.pic %}
+                        <td>{% image product.pic fill-80x80 %}</td>
+                    {% else %}
+                        <td><img src="/media/images/300px-No_image_available.svg.2e16d0ba.fill-80x80.png"/> </td>
+                    {% endif %}
+                    <td><a href="{% pageurl product %}">{{product.title}}</a></td>
+                    <td>{{product.item_number|stringformat:"04d"}}</td>
+                    <td>{{product.SKU}}</td>
+                    <td>${{product.price}}</td>
+                    <td>{{product.description}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

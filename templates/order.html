@@ -1,0 +1,15 @@
+{% extends "newbase.html" %}
+
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    {% csrf_token %}
+    <div class="container">
+        <h2>Order Form</h2>
+        <h3>{{product.title}}</h3>
+        {% crispy form %}
+    </div>
+{% endblock %}

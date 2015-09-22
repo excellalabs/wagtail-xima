@@ -1,0 +1,54 @@
+{% extends "newbase.html" %}
+
+
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+{% load mathfilters %}
+
+{% block content %}
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#product_list').DataTable();
+        } );
+    </script>
+
+    <style type="text/css">
+        td {
+            font-weight: bold;
+        }
+    </style>
+
+    <div class="container">
+        <table id="product_list" class="table table-striped">
+            <thead>
+                <th></th>
+                <th colspan="2">Stocked Quantity</th>
+                <th>Item No.</th>
+                <th>SKU</th>
+                <th>Cost</th>
+                <th>Price</th>
+                <th>Unit Contribution</th>
+
+            </thead>
+            {% for product in product_list %}
+                <tr>
+                    <td><a href="{% pageurl product %}">{{product.title}}</a></td>
+                    <td>{{product.stocked_quantity}}</td>
+                    <td><a href="/order/{{product.id}}" class="btn btn-xs btn-success">+</a></td>
+                    <td>{{product.item_number|stringformat:"04d"}}</td>
+                    <td>{{product.SKU}}</td>
+                    <td>${{product.cost}}</td>
+                    <td>${{product.price}}</td>
+                    {% if product.price > product.cost %}
+                        <td style="color: green">${{product.price|sub:product.cost}}</td>
+                    {% elif product.price == product.cost %}
+                        <td>$ {{product.price|sub:product.cost}}</td>
+                    {% else %}
+                        <td style="color: red">${{product.price|sub:product.cost}}</td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
