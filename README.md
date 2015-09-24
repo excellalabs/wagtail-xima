@@ -1,9 +1,9 @@
 # XIMA
 Excella Inventory Management App
 
-##Concept
+###Concept
 XIMA is a Wagtail proof of concept application to mock a company's product management process.
 
-##Installation Instructions
+###Installation Instructions
 
-##How to use this site
+###How to use this site

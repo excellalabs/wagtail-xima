@@ -19,6 +19,8 @@ urlpatterns = [
     url(r'product_list/$', views.product_list, name='product_list'),
     url(r'inventory_logs/$', views.inventory_logs, name='inventory_logs'),
     url(r'order/(\d+)/$', views.order, name='order'),
+    url(r'metrics/$', views.metrics, name='metrics'),
+    url(r'^sales_data/(\d+)/$', views.get_sales_data, name='sales_data'),
     url(r'', include(wagtail_urls)),
 ]
 

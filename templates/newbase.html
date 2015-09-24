@@ -45,6 +45,13 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="http://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
 
+    <!-- amCharts javascript sources -->
+    <script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="http://www.amcharts.com/lib/3/serial.js"></script>
+    <script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/light.js"></script>
+
+    <script type="text/javascript" src="{% static 'js/graph.js' %}"></script>
+
 </head>
 
 <body style="background-color: whitesmoke" {% block body_class %}{% endblock %}>
@@ -75,6 +82,9 @@
                     </li>
                     <li>
                         <a href="#">Order</a>
+                    </li>
+                    <li>
+                        <a href="/metrics">Metrics</a>
                     </li>
                     <li><a href="/admin">Admin</a></li>
                 </ul>
