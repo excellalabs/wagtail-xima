@@ -46,10 +46,10 @@ Once you've entered in the content you wish to describe the inventory item with,
 menu at the bottom of the screen.
 
 Once you're done adding content (Inventory Items), visit localhost:8000 again. You may now view a list of products
-by selecting the *Products tab* from the nav bar.
+by selecting the **Products** tab from the nav bar.
 
-Selecting the *Inventory* tab takes you to another list with the stocked quantities, sales info, etc.
+Selecting the **Inventory** tab takes you to another list with the stocked quantities, sales info, etc.
 Clicking the green plus sign next to any item on the inventory page allows you to order/stock more.
 
-Clicking the *Metrics* tab shows you historical sales data for your products and updates in real time as products are
+Clicking the **Metrics** tab shows you historical sales data for your products and updates in real time as products are
 stocked and sold.
