@@ -16,6 +16,7 @@ You'll need to activate it so `cd myenv/Scripts`, `. activate`
 `cd ..` and then clone the repo:
 
 SSH(recommended): `git clone git@github.com:nickoliver86/wagtail-xima.git`
+
 HTTPS: `git clone https://github.com/nickoliver86/wagtail-xima.git`
 
 `cd wagtail-xima`
@@ -31,7 +32,7 @@ and visit localhost:8000 and get a functional, albeit bare version of XIMA.
 
 Since the backbone of this site is Wagtail, you'll need to access the admin console to add your content.
 
-First, from the command line type `python manage.py createsuperuser` and follow the instructions.
+First, from the command line, type `python manage.py createsuperuser` and follow the instructions.
 
 You should now be able to visit localhost:8000/admin and sign in with your new superuser credentials.
 
@@ -45,10 +46,10 @@ Once you've entered in the content you wish to describe the inventory item with,
 menu at the bottom of the screen.
 
 Once you're done adding content (Inventory Items), visit localhost:8000 again. You may now view a list of products
-by selecting the Products tab from the nav bar.
+by selecting the *Products tab* from the nav bar.
 
-Selecting the Inventory tab takes you to another list with the stocked quantities, sales info, etc.
+Selecting the *Inventory* tab takes you to another list with the stocked quantities, sales info, etc.
 Clicking the green plus sign next to any item on the inventory page allows you to order/stock more.
 
-Clicking the Metrics tab shows you historical sales data for your products and updates in real time as products are
-stocked and sold. 
+Clicking the *Metrics* tab shows you historical sales data for your products and updates in real time as products are
+stocked and sold.
