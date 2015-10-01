@@ -16,6 +16,22 @@ def product_list(request):
 def inventory_logs(request):
     return render(request, 'inventory_logs.html', {'product_list': InventoryItem.objects.all()})
 
+def base_order(request):
+    if request.POST:
+        form = FormOrder(request.POST)
+        if form.is_valid():
+            product = form.cleaned_data['inventory']
+            order_quantity = form.cleaned_data['quantity']
+            product.stocked_quantity += order_quantity
+            sales_data, created = ItemSalesData.objects.get_or_create(month=datetime.now().month, product=product)
+            sales_data.stocked += order_quantity
+            sales_data.save()
+            product.save()
+            return redirect("/inventory_logs")
+    else:
+        form = FormOrder()
+        return render(request, 'order.html', {'inventory': InventoryItem.objects.all(), 'form': form})
+
 def order(request, product_id):
     if request.POST:
         form = FormOrder(request.POST)

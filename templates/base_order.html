@@ -9,6 +9,7 @@
     {% csrf_token %}
     <div class="container">
         <h2>Order Form</h2>
+        <h3>{{product.title}}</h3>
         {% crispy form %}
     </div>
 {% endblock %}

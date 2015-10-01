@@ -81,7 +81,11 @@
                         <a href="/inventory_logs">Inventory</a>
                     </li>
                     <li>
-                        <a href="#">Order</a>
+                        {% if user.is_authenticated %}
+                            <a href="/order">Order</a>
+                        {% else %}
+                            <a onclick="$('#login_warning').show()" style="cursor: pointer;">Order</a>
+                        {% endif%}
                     </li>
                     <li>
                         <a href="/metrics">Metrics</a>
@@ -94,10 +98,13 @@
         <!-- /.container -->
     </nav>
 
+
+
     <!-- Page Content -->
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
+                <div id="login_warning" class="alert alert-danger" role="alert" style="display: none">You must be logged in to place an order</div>
                 {% wagtailuserbar %}
 
                 {% block content %}

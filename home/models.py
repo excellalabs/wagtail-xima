@@ -55,57 +55,57 @@ class InventoryItem(Page, models.Model):
         data.append(
                 {
                     'date': '2015-1',
-                    'Stocked': 30,
-                    'Sold': 15,
+                    'Stocked': 10,
+                    'Sold': 5,
                 }
         )
         data.append(
                 {
                     'date': '2015-2',
-                    'Stocked': 30,
-                    'Sold': 15,
+                    'Stocked': 10,
+                    'Sold': 5,
                 }
         )
         data.append(
                 {
                     'date': '2015-3',
-                    'Stocked': 30,
-                    'Sold': 15,
+                    'Stocked': 10,
+                    'Sold': 5,
                 }
         )
         data.append(
                 {
                     'date': '2015-4',
-                    'Stocked': 30,
-                    'Sold': 15,
+                    'Stocked': 10,
+                    'Sold': 5,
                 }
         )
         data.append(
                 {
                     'date': '2015-5',
-                    'Stocked': 30,
-                    'Sold': 15,
+                    'Stocked': 10,
+                    'Sold': 5,
                 }
         )
         data.append(
                 {
                     'date': '2015-6',
-                    'Stocked': 30,
-                    'Sold': 15,
+                    'Stocked': 10,
+                    'Sold': 5,
                 }
         )
         data.append(
                 {
                     'date': '2015-7',
-                    'Stocked': 30,
-                    'Sold': 15,
+                    'Stocked': 10,
+                    'Sold': 5,
                 }
         )
         data.append(
                 {
                     'date': '2015-8',
-                    'Stocked': 30,
-                    'Sold': 15,
+                    'Stocked': 10,
+                    'Sold': 5,
                 }
         )
 

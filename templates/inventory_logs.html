@@ -23,7 +23,11 @@
         <table id="product_list" class="table table-striped">
             <thead>
                 <th></th>
-                <th colspan="2">Stocked Quantity</th>
+                {% if user.is_authenticated %}
+                    <th colspan="2">Stocked Quantity</th>
+                {% else %}
+                    <th>Stocked Quantity</th>
+                {% endif %}
                 <th>Item No.</th>
                 <th>SKU</th>
                 <th>Cost</th>
@@ -35,7 +39,9 @@
                 <tr>
                     <td><a href="{% pageurl product %}">{{product.title}}</a></td>
                     <td>{{product.stocked_quantity}}</td>
-                    <td><a href="/order/{{product.id}}" class="btn btn-xs btn-success">+</a></td>
+                    {% if user.is_authenticated %}
+                        <td><a href="/order/{{product.id}}" class="btn btn-xs btn-success">+</a></td>
+                    {% endif %}
                     <td>{{product.item_number|stringformat:"04d"}}</td>
                     <td>{{product.SKU}}</td>
                     <td>${{product.cost}}</td>

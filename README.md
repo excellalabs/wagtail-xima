@@ -50,6 +50,8 @@ by selecting the **Products** tab from the nav bar.
 
 Selecting the **Inventory** tab takes you to another list with the stocked quantities, sales info, etc.
 Clicking the green plus sign next to any item on the inventory page allows you to order/stock more.
+As of now, you can't decrement a product quantity because that ideally results from a sale which isn't currently a
+supported feature. If this site was adapted to also support purchasing of products, it would be added.
 
 Clicking the **Metrics** tab shows you historical sales data for your products and updates in real time as products are
-stocked and sold.
+stocked and sold (Again, sold will show up as 0 as it is currently unsupported).

@@ -18,6 +18,7 @@ urlpatterns = [
     url(r'^search/$', 'search.views.search', name='search'),
     url(r'product_list/$', views.product_list, name='product_list'),
     url(r'inventory_logs/$', views.inventory_logs, name='inventory_logs'),
+    url(r'order/$', views.base_order, name='base_order'),
     url(r'order/(\d+)/$', views.order, name='order'),
     url(r'metrics/$', views.metrics, name='metrics'),
     url(r'^sales_data/(\d+)/$', views.get_sales_data, name='sales_data'),
