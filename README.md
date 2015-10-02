@@ -4,16 +4,19 @@ Excella Inventory Management App
 ###Concept
 XIMA is a Wagtail proof of concept application to mock a company's product management process.
 
-###Installation Instructions for Windows
+###Installation Instructions
 
 First, I'd advise creating a virtual environment to work in with.
 If you don't already have it installed, `pip install virtualenv`
 
 Then, `virtualenv myenv` or choose your own name.
 
-You'll need to activate it so `cd myenv/Scripts`, `. activate`
+You'll need to activate it,
 
-`cd ..` and then clone the repo:
+For Windows: `cd myenv/Scripts`, `. activate`
+For Mac/Linux: `source myenv/bin/activate`
+
+`cd` back into the myenv directory and then clone the repo:
 
 SSH(recommended): `git clone git@github.com:nickoliver86/wagtail-xima.git`
 
