@@ -14,6 +14,7 @@ Then, `virtualenv myenv` or choose your own name.
 You'll need to activate it,
 
 For Windows: `cd myenv/Scripts`, `. activate`
+
 For Mac/Linux: `source myenv/bin/activate`
 
 `cd` back into the myenv directory and then clone the repo:
