@@ -1,3 +1,6 @@
+https://travis-ci.org/nickoliver86/wagtail-xima.svg?branch=master
+
+---
 # XIMA
 Excella Inventory Management App
 
