@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/nickoliver86/wagtail-xima.svg?branch=master)](https://travis-ci.org/nickoliver86/wagtail-xima)
+[![Coverage Status](https://coveralls.io/repos/excellalabs/wagtail-xima/badge.svg?branch=master&service=github)](https://coveralls.io/github/excellalabs/wagtail-xima?branch=master)
+
 # XIMA
 Excella Inventory Management App
 
