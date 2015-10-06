@@ -133,6 +133,6 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
-# Wagtail settings
+#  Wagtail settings
 
 WAGTAIL_SITE_NAME = "XIMA"
