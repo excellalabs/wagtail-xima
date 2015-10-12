@@ -11,10 +11,10 @@ from home.forms import *
 #     if "<img>"
 
 def product_list(request):
-    return render(request, 'product_list.html', {'product_list': InventoryItem.objects.all()})
+    return render(request, 'product_list.html', {'product_list': InventoryItem.objects.live()})
 
 def inventory_logs(request):
-    return render(request, 'inventory_logs.html', {'product_list': InventoryItem.objects.all()})
+    return render(request, 'inventory_logs.html', {'product_list': InventoryItem.objects.live()})
 
 def base_order(request):
     if request.POST:
@@ -30,7 +30,7 @@ def base_order(request):
             return redirect("/inventory_logs")
     else:
         form = FormOrder()
-        return render(request, 'order.html', {'inventory': InventoryItem.objects.all(), 'form': form})
+        return render(request, 'order.html', {'inventory': InventoryItem.objects.live(), 'form': form})
 
 def order(request, product_id):
     if request.POST:
@@ -51,7 +51,7 @@ def order(request, product_id):
         return render(request, 'order.html', {'product': product, 'form': form})
 
 def metrics(request):
-    products = InventoryItem.objects.all()
+    products = InventoryItem.objects.live()
     return render(request, 'metrics.html', {'products': products})
 
 def get_sales_data(request, product_id):

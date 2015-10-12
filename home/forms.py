@@ -8,7 +8,7 @@ from crispy_forms.bootstrap import FormActions
 from models import *
 
 class FormOrder(forms.Form):
-    inventory = forms.ModelChoiceField(label="Inventory Item", queryset=InventoryItem.objects.all())
+    inventory = forms.ModelChoiceField(label="Inventory Item", queryset=InventoryItem.objects.live())
     quantity = forms.IntegerField(label="Enter a quantity here")
     helper = FormHelper()
     helper.form_method = 'POST'
